@@ -11,9 +11,7 @@
    ========================================================================== */
 
 html {
-    color: #222;
     font-size: 1em;
-    line-height: 1.4;
 }
 
 /*
@@ -96,20 +94,128 @@ textarea {
    ========================================================================== */
 
 
+   /* typography */
 
+   body {
+    background-color: #F7F7F7;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.45;
+    color: #242424;
+   }
 
+   p {margin-bottom: 1.3em;}
 
+   h1, h2, h3, h4 {
+     margin: 1.414em 0 0.5em;
+     font-weight: inherit;
+     line-height: 1.2;
+   }
 
+   h1 {
+     margin-top: 0;
+     font-size: 3.157em;
+   }
 
+   h2 {font-size: 2.369em;}
 
+   h3 {font-size: 1.777em;}
 
+   h4 {font-size: 1.333em;}
 
+   .lead {
+        font-size: 1.777em;
+        text-align: center;
+    }
 
+   small, .font_small {font-size: 0.75em;}
 
+   .text-center {text-align: center;}
 
+   /* formatting */
 
+    .container {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 75rem;
+        position: relative;
+        box-sizing: border-box;
+        background-color: #FFFFFF;
+    }
 
+   .jumbotron.spread {
+        background-image: url("http://placehold.it/1920x1080");
+        background-size: cover;
+        background-position: center;
+        padding: 15rem 0;
+        margin-bottom: 0;
+    }
 
+    .row {
+        padding: 0 1rem;
+    }
+
+    .column {
+      width: 100%;
+      margin-left: 4%;
+      float: left;
+      box-sizing: border-box;
+    }
+    .column:first-child             { margin-left: 0; }
+
+    .one-half.column                { width: 48%; }
+
+    .one-third.column               { width: 30.6666666667%; }
+    .two-thirds.column              { width: 65.3333333333%; }
+
+    .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+    .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+
+    .container:after,
+    .row:after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .navbar {
+        clear: both;
+        line-height: 5rem;
+        height: 5rem;
+        padding: 0 1em;
+    }
+
+    .navbar img {
+        width: 5rem;
+        height: 5rem;
+        float: left;
+    }
+
+    .navbar ul {
+        margin-top: 0;
+        float: right;
+    }
+
+    .navbar li {
+        text-decoration: none;
+        margin-left: 2rem;
+    }
+
+    .list-menu ul {
+        list-style: none;
+        margin: 0;
+    }
+
+    .list-menu li {
+        display: inline-block;
+        text-align: center;
+    }
+
+    .list-menu a {
+      text-decoration: none;
+      display: block;
+      transition: .3s background-color;
+    }
 
 /* ==========================================================================
    Helper classes
@@ -191,8 +297,46 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
+@media (max-width: 40em) {
+    .container {
+        padding: 0 1rem;
+    }
+
+    .column {
+      margin-left: 0;
+      margin-bottom: 1.414em;
+    }
+
+    .one-half.column,
+    .one-third.column,
+    .two-thirds.column, { 
+        width: 100%;
+    }
+
+    .offset-by-one-third.columns,
+    .offset-by-two-thirds.columns {
+        margin-left: 0;
+    }
+
+    .navbar {
+        height: 6rem;
+        line-height: 3rem;
+    }
+
+    .navbar h1 {
+        margin: 0;
+        margin-left: 1rem;
+        width: 100%;
+        text-align: left;
+    }
+
+    .navbar ul {
+        float: left;
+    }
+
+    .navbar li {
+        margin: 0 1rem;
+    }
 }
 
 @media print,
