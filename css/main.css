@@ -144,7 +144,7 @@ textarea {
     }
 
    .jumbotron.spread {
-        background-image: url("http://placehold.it/1920x1080");
+        background-image: url("../img/peeps.jpg");
         background-size: cover;
         background-position: center;
         padding: 15rem 0;
@@ -153,6 +153,10 @@ textarea {
 
     .row {
         padding: 0 1rem;
+    }
+
+    .nested.row {
+      padding: 0;
     }
 
     .column {
@@ -215,6 +219,11 @@ textarea {
       text-decoration: none;
       display: block;
       transition: .3s background-color;
+    }
+
+    .image-responsive {
+        width: 100%;
+        height: auto;
     }
 
 /* ==========================================================================
@@ -309,7 +318,7 @@ textarea {
 
     .one-half.column,
     .one-third.column,
-    .two-thirds.column, { 
+    .two-thirds.column { 
         width: 100%;
     }
 
