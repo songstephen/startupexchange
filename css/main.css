@@ -151,6 +151,8 @@ textarea {
         margin-bottom: 0;
     }
 
+    /* from Bootstrap by Stephen
+
     .row {
         padding: 0 1rem;
     }
@@ -176,7 +178,7 @@ textarea {
       content: "";
       display: table;
       clear: both;
-    }
+    }*/
 
     .navbar {
         clear: both;
@@ -215,6 +217,16 @@ textarea {
       text-decoration: none;
       display: block;
       transition: .3s background-color;
+    }
+
+    .bios img {
+      width: 95%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    #bio {
+      display:none;
     }
 
 /* ==========================================================================
@@ -309,7 +321,7 @@ textarea {
 
     .one-half.column,
     .one-third.column,
-    .two-thirds.column, { 
+    .two-thirds.column, {
         width: 100%;
     }
 
