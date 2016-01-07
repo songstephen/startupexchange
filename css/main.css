@@ -10,9 +10,9 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
-html {
+   html {
     font-size: 1em;
-}
+  }
 
 /*
  * Remove text-shadow in selection highlight:
@@ -22,27 +22,27 @@ html {
  * Customize the background color to match your design.
  */
 
-::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
+ ::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
+  background: #b3d4fc;
+  text-shadow: none;
 }
 
 /*
  * A better looking default horizontal rule
  */
 
-hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+ hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 /*
@@ -51,43 +51,43 @@ hr {
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
 
-audio,
-canvas,
-iframe,
-img,
-svg,
-video {
-    vertical-align: middle;
+ audio,
+ canvas,
+ iframe,
+ img,
+ svg,
+ video {
+  vertical-align: middle;
 }
 
 /*
  * Remove default fieldset styles.
  */
 
-fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+ fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /*
  * Allow only vertical resizing of textareas.
  */
 
-textarea {
-    resize: vertical;
+ textarea {
+  resize: vertical;
 }
 
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
 
-.browserupgrade {
+   .browserupgrade {
     margin: 0.2em 0;
     background: #ccc;
     color: #000;
     padding: 0.2em 0;
-}
+  }
 
 /* ==========================================================================
    Author's custom styles
@@ -99,132 +99,227 @@ textarea {
    body {
     background-color: #F7F7F7;
     margin: 0;
+    margin-top: 5rem;
+    font-family: "freight-sans-pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
     font-weight: 400;
     line-height: 1.45;
     color: #242424;
-   }
+  }
 
-   p {margin-bottom: 1.3em;}
+  p {margin-bottom: 1.3em;}
 
-   h1, h2, h3, h4 {
-     margin: 1.414em 0 0.5em;
-     font-weight: inherit;
-     line-height: 1.2;
-   }
+  h1, h2, h3, h4 {
+   margin: 1.414em 0 0.5em;
+   font-weight: inherit;
+   font-family: "franklin-gothic-urw","Franklin Gothic Medium","Franklin Gothic","ITC Franklin Gothic",Arial,sans-serif;
+   line-height: 1.2;
+ }
 
-   h1 {
-     margin-top: 0;
-     font-size: 3.157em;
-   }
+ h1 {
+   margin-top: 0;
+   font-size: 3.157em;
+ }
 
-   h2 {font-size: 2.369em;}
+ h2 {font-size: 2.369em;}
 
-   h3 {font-size: 1.777em;}
+ h3 {font-size: 1.777em;}
 
-   h4 {font-size: 1.333em;}
+ h4 {font-size: 1.333em;}
 
-   .lead {
-        font-size: 1.777em;
-        text-align: center;
-    }
+ .lead {
+  font-size: 1.777em;
+  text-align: center;
+}
 
-   small, .font_small {font-size: 0.75em;}
+small, .font_small {font-size: 0.75em;}
 
-   .text-center {text-align: center;}
+.text-center {text-align: center;}
 
-   /* formatting */
+a {
+  color: #242424;
+  text-decoration: none;
+}
 
-    .container {
-        margin: 0 auto;
-        width: 100%;
-        max-width: 75rem;
-        position: relative;
-        box-sizing: border-box;
-        background-color: #FFFFFF;
-    }
+/* formatting */
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 60rem;
+  position: relative;
+  box-sizing: border-box;
+}
 
-   .jumbotron.spread {
-        background-image: url("../img/peeps.jpg");
-        background-size: cover;
-        background-position: center;
-        padding: 15rem 0;
-        margin-bottom: 0;
-    }
+.container.small {
+  max-width: 40rem;
+}
 
-    .row {
-        padding: 0 1rem;
-    }
+main {
+  background-color: #FFFFFF;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
 
-    .nested.row {
-      padding: 0;
-    }
+.jumbotron h1 {
+  text-transform: uppercase;
+  color: #FFFFFF;
+  text-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+}
 
-    .column {
-      width: 100%;
-      margin-left: 4%;
-      float: left;
-      box-sizing: border-box;
-    }
-    .column:first-child             { margin-left: 0; }
+.jumbotron.spread {
+  background-image: url("../img/peeps.jpg");
+  background-size: cover;
+  background-position: center;
+  padding: 10rem 0;
+  margin-bottom: 0;
+}
 
-    .one-half.column                { width: 48%; }
+.row {
+  padding: 0 1rem;
+}
 
-    .one-third.column               { width: 30.6666666667%; }
-    .two-thirds.column              { width: 65.3333333333%; }
+.nested.row {
+  padding: 0;
+}
 
-    .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
-    .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
+.column {
+  width: 100%;
+  margin-left: 4%;
+  float: left;
+  box-sizing: border-box;
+}
+.column:first-child             { margin-left: 0; }
 
-    .container:after,
-    .row:after {
-      content: "";
-      display: table;
-      clear: both;
-    }
+.one-half.column                { width: 48%; }
 
-    .navbar {
-        clear: both;
-        line-height: 5rem;
-        height: 5rem;
-        padding: 0 1em;
-    }
+.one-third.column               { width: 30.6666666667%; }
+.two-thirds.column              { width: 65.3333333333%; }
 
-    .navbar img {
-        width: 5rem;
-        height: 5rem;
-        float: left;
-    }
+.offset-by-one-third.columns    { margin-left: 34.6666666667%; }
+.offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
 
-    .navbar ul {
-        margin-top: 0;
-        float: right;
-    }
+.container:after,
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
 
-    .navbar li {
-        text-decoration: none;
-        margin-left: 2rem;
-    }
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1337;
+  background-color: rgba(36, 36, 36, 0.9); 
+  /*background-color: #393939;*/
+  box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.5);
+  clear: both;
+  line-height: 5rem;
+  height: 5rem;
+}
 
-    .list-menu ul {
-        list-style: none;
-        margin: 0;
-    }
+.navbar > .container {
+  padding: 0 1em;
+}
 
-    .list-menu li {
-        display: inline-block;
-        text-align: center;
-    }
+.navbar img {
+  width: 4rem;
+  height: 4rem;
+  margin: 0.5rem 0;
+  float: left;
+}
 
-    .list-menu a {
-      text-decoration: none;
-      display: block;
-      transition: .3s background-color;
-    }
+.navbar a {
+  color: #FFFFFF;
+  font-family: "franklin-gothic-urw","Franklin Gothic Medium","Franklin Gothic","ITC Franklin Gothic",Arial,sans-serif;
+}
 
-    .image-responsive {
-        width: 100%;
-        height: auto;
-    }
+.navbar ul {
+  margin: 0;
+  height: 5rem;
+  float: right;
+}
+
+.navbar li {
+  text-decoration: none;
+  margin-left: 2rem;
+}
+
+section {
+  margin-top: 3.157em;
+  margin-bottom: 3.157em;
+}
+
+.list-menu ul {
+  list-style: none;
+  margin: 0;
+}
+
+.list-menu li {
+  display: inline-block;
+  text-align: center;
+}
+
+.list-menu a {
+  text-decoration: none;
+  display: block;
+  transition: .3s background-color;
+}
+
+.navbar .cta {
+  line-height: 2.5rem;
+  padding: 0 1rem;
+  /*background-color: #ffffff; */
+  /*color: #242424; */
+  border: 2px solid #FFFFFF;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.navbar .cta:hover {
+  color: #242424;
+  background-color: #FFFFFF;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.ghost-button {
+  display: inline-block;
+  width: 200px;
+  padding: 0.75rem 1.5rem;
+  margin: 1.414em 0 0.5em;
+  border: 3px solid #242424;
+  font-family: "franklin-gothic-urw","Franklin Gothic Medium","Franklin Gothic","ITC Franklin Gothic",Arial,sans-serif;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.ghost-button:hover {
+  color: #FFFFFF;
+  background-color: #242424;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.image-responsive {
+  width: 100%;
+  height: auto;
+}
 
 /* ==========================================================================
    Helper classes
@@ -234,8 +329,8 @@ textarea {
  * Hide visually and from screen readers:
  */
 
-.hidden {
-    display: none !important;
+ .hidden {
+  display: none !important;
 }
 
 /*
@@ -243,15 +338,15 @@ textarea {
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
 
-.visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
+ .visuallyhidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }
 
 /*
@@ -260,22 +355,22 @@ textarea {
  * https://www.drupal.org/node/897638
  */
 
-.visuallyhidden.focusable:active,
-.visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
+ .visuallyhidden.focusable:active,
+ .visuallyhidden.focusable:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
 }
 
 /*
  * Hide visually and from screen readers, but maintain layout
  */
 
-.invisible {
-    visibility: hidden;
+ .invisible {
+  visibility: hidden;
 }
 
 /*
@@ -290,14 +385,14 @@ textarea {
  *    `:before` to contain the top-margins of child elements.
  */
 
-.clearfix:before,
-.clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
+ .clearfix:before,
+ .clearfix:after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
 }
 
 .clearfix:after {
-    clear: both;
+  clear: both;
 }
 
 /* ==========================================================================
@@ -306,9 +401,9 @@ textarea {
    Modify as content requires.
    ========================================================================== */
 
-@media (max-width: 40em) {
+   @media (max-width: 40em) {
     .container {
-        padding: 0 1rem;
+      padding: 0 1rem;
     }
 
     .column {
@@ -319,41 +414,43 @@ textarea {
     .one-half.column,
     .one-third.column,
     .two-thirds.column { 
-        width: 100%;
+      width: 100%;
     }
 
     .offset-by-one-third.columns,
     .offset-by-two-thirds.columns {
-        margin-left: 0;
+      margin-left: 0;
     }
 
     .navbar {
-        height: 6rem;
-        line-height: 3rem;
+      height: 6rem;
+      line-height: 3rem;
     }
 
     .navbar h1 {
-        margin: 0;
-        margin-left: 1rem;
-        width: 100%;
-        text-align: left;
+      margin: 0;
+      margin-left: 1rem;
+      width: 100%;
+      text-align: left;
     }
 
     .navbar ul {
-        float: left;
+      float: left;
     }
 
     .navbar li {
-        margin: 0 1rem;
+      /*margin: 0 1rem;*/
+      margin: 0;
     }
-}
 
-@media print,
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 1.25dppx),
-       (min-resolution: 120dpi) {
+  }
+
+  @media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
     /* Style adjustments for high resolution devices */
-}
+  }
 
 /* ==========================================================================
    Print styles.
@@ -361,44 +458,44 @@ textarea {
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
 
-@media print {
+   @media print {
     *,
     *:before,
     *:after {
-        background: transparent !important;
+      background: transparent !important;
         color: #000 !important; /* Black prints faster:
-                                   http://www.sanbeiji.com/archives/953 */
+        http://www.sanbeiji.com/archives/953 */
         box-shadow: none !important;
         text-shadow: none !important;
-    }
+      }
 
-    a,
-    a:visited {
+      a,
+      a:visited {
         text-decoration: underline;
-    }
+      }
 
-    a[href]:after {
+      a[href]:after {
         content: " (" attr(href) ")";
-    }
+      }
 
-    abbr[title]:after {
+      abbr[title]:after {
         content: " (" attr(title) ")";
-    }
+      }
 
     /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
 
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
+     a[href^="#"]:after,
+     a[href^="javascript:"]:after {
+      content: "";
     }
 
     pre,
     blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
+      border: 1px solid #999;
+      page-break-inside: avoid;
     }
 
     /*
@@ -406,28 +503,28 @@ textarea {
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
 
-    thead {
-        display: table-header-group;
+     thead {
+      display: table-header-group;
     }
 
     tr,
     img {
-        page-break-inside: avoid;
+      page-break-inside: avoid;
     }
 
     img {
-        max-width: 100% !important;
+      max-width: 100% !important;
     }
 
     p,
     h2,
     h3 {
-        orphans: 3;
-        widows: 3;
+      orphans: 3;
+      widows: 3;
     }
 
     h2,
     h3 {
-        page-break-after: avoid;
+      page-break-after: avoid;
     }
-}
+  }
