@@ -93,6 +93,11 @@
    Author's custom styles
    ========================================================================== */
 
+   /*IN DEVELOPMENT, COMMENT THIS OUT!*/
+   /*This is to prevent the ugly flashing of text while Typekit is still loading its fonts*/
+   .wf-loading {
+     visibility: hidden;
+   }
 
    /* typography */
 
@@ -110,7 +115,7 @@
 
   h1, h2, h3, h4 {
    margin: 1.414em 0 0.5em;
-   font-weight: inherit;
+   font-weight: bold;
    font-family: "franklin-gothic-urw","Franklin Gothic Medium","Franklin Gothic","ITC Franklin Gothic",Arial,sans-serif;
    line-height: 1.2;
  }
