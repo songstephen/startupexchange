@@ -14,6 +14,8 @@
         <link rel="stylesheet" href="css/main.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="https://use.typekit.net/dsl7pmj.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -21,24 +23,29 @@
         <![endif]-->
 
         <!-- Add your site or application content here -->
-        <header class="container navbar">
-          <a href="#"><img src="http://placehold.it/512x512"></a>
-          <nav>
-            <ul class="list-menu">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Meetings</a></li>
-              <li><a href="#">Media</a></li>
-            </ul>
-          </nav>
+        <header class="navbar">
+            <div class="container">
+                <a href="#"><img src="img/sx-logo-white.png"></a>
+                <nav>
+                  <ul class="list-menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Meetings</a></li>
+                    <li><a href="#">Media</a></li>
+                    <li><a href="#" class="cta">Get Involved</a></li>
+                  </ul>
+                </nav>
+            </div>
         </header>
         <main class="container">
+            <div class="row"></div>
+            <section>
             <div class="row">
                 <div class="one-half column">
-                    <img src="http://placehold.it/800x600" class="image-responsive">
+                    <img src="img/contact.jpg" class="image-responsive">
                 </div>
                 <div class="one-half column">
-                    <h2>Keep in touch.</h2>
+                    <h2 class="flush-top">Keep in touch.</h2>
                     <p>Sign up for our newsletter to recieve updates about our meetings & events.</p>
                     <!-- Begin MailChimp Signup Form -->
                     <div id="mc_embed_signup">
@@ -47,47 +54,52 @@
                     <div class="nested row">
                         <div class="one-half column">
                             <div class="mc-field-group">
-                                <label for="mce-MMERGE14">First Name </label>
-                                <input type="text" value="" name="MMERGE14" class="required" id="mce-MMERGE14">
+                                <input type="text" value="" name="MMERGE14" class="required" id="mce-MMERGE14" placeholder="First Name">
                             </div>
                         </div>
                         <div class="one-half column">
                             <div class="mc-field-group">
-                                <label for="mce-MMERGE15">Last Name </label>
-                                <input type="text" value="" name="MMERGE15" class="required" id="mce-MMERGE15">
+                                <input type="text" value="" name="MMERGE15" class="required" id="mce-MMERGE15" placeholder="Last Name">
                             </div>
                         </div>
                     </div>
-                    <div class="mc-field-group">
-                        <label for="mce-EMAIL">Email Address </label>
-                        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                    <div class="nested row">
+                        <div class="mc-field-group">
+                            <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
+                        </div>
                     </div>
                         <div id="mce-responses" class="clear">
                             <div class="response" id="mce-error-response" style="display:none"></div>
                             <div class="response" id="mce-success-response" style="display:none"></div>
                         </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_792e5a329ed7437ad903bc8a8_5c64af8d82" tabindex="-1" value=""></div>
-                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+                        <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button color-navy flush-top"></div>
                         </div>
                     </form>
                     </div>
                     <!--End mc_embed_signup-->
-                    <div class="social-links">
-                    <i class="fa fa-facebook-official"></i><i class="fa fa-instagram"></i><i class="fa fa-twitter-square"></i>
-                    </div>
                 </div>
             </div>
+            </section>
+            <section>
             <div class="row text-center">
                 <div class="one-half column">
                     <h4>For general inquiries</h4>
-                    <a href="#">contact@startup.exchange</a>
+                    <a href="mailto:contact@startup.exchange">contact@startup.exchange</a>
                 </div>
                 <div class="one-half column">
-                    <h4>For sponsorship/mentorship opportunities</h4>
-                    <a href="#">mentors@startup.exchange</a>
+                    <h4>For mentorship opportunities</h4>
+                    <a href="mailto:mentors@startup.exchange">mentors@startup.exchange</a>
                 </div>
             </div>
+            </section>
         </main>
+        <footer>
+            <a href="#" target="_blank"><i class="fa fa-facebook-official"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-twitter-square"></i></a>
+            <a href="#" target="_blank"><i class="fa fa-instagram"></i></a>
+            <p class="font_small">Copyright © 2016 Startup Exchange. All rights reserved. Love what you do.</p>
+        </footer>
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
