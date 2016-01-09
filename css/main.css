@@ -226,7 +226,29 @@ textarea {
     }
 
     #bio {
+      margin:10px;
+    }
+
+    .modal {
+      z-index: 9999;
+      border: 1px solid black;
+      position: fixed;
+      background-color: white;
+      top:10%;
+      right:0;
+      left:25%;
+      bottom:10%;
+      width:50%;
       display:none;
+    }
+
+    #x {
+      margin: 10px;
+    }
+
+    #close {
+      text-decoration: none;
+      color:gray;
     }
 
 /* ==========================================================================
