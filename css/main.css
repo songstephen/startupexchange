@@ -101,23 +101,21 @@
 
    /* typography */
 
-   body {
-    background-color: #F7F7F7;
-    margin: 0;
-    margin-top: 5rem;
-    font-family: "freight-sans-pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
-    font-weight: 400;
-    line-height: 1.45;
-    color: #242424;
+ body {
+  background-color: #F7F7F7;
+  margin: 0;
+  margin-top: 5rem;
+  font-family: "freight-sans-pro","Trebuchet MS","Lucida Grande","Lucida Sans Unicode","Lucida Sans",sans-serif;
+/*  font-weight: 400;
+  line-height: 1.45;
+  color: #242424;*/
   }
 
   p {margin-bottom: 1.3em;}
 
   h1, h2, h3, h4 {
    margin: 1.414em 0 0.5em;
-   font-weight: bold;
    font-family: "franklin-gothic-urw","Franklin Gothic Medium","Franklin Gothic","ITC Franklin Gothic",Arial,sans-serif;
-   line-height: 1.2;
  }
 
  h1 {
@@ -219,10 +217,6 @@ label > .label-body {
   box-sizing: border-box;
 }
 
-.container.small {
-  max-width: 40rem;
-}
-
 main {
   background-color: #FFFFFF;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
@@ -262,17 +256,10 @@ footer .fa:hover {
   background-image: url("../img/peeps.jpg");
   background-size: cover;
   background-position: center;
-  padding: 10rem 0;
+  padding: 16rem 0;
   margin-bottom: 0;
 }
 
-.row {
-  padding: 0 1rem;
-}
-
-.nested.row {
-  padding: 0;
-}
 
 .column {
   width: 100%;
@@ -289,13 +276,6 @@ footer .fa:hover {
 
 .offset-by-one-third.columns    { margin-left: 34.6666666667%; }
 .offset-by-two-thirds.columns   { margin-left: 69.3333333333%; }
-
-.container:after,
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
 
 .navbar {
   position: fixed;
@@ -324,6 +304,7 @@ footer .fa:hover {
 .navbar a {
   color: #FFFFFF;
   font-family: "franklin-gothic-urw","Franklin Gothic Medium","Franklin Gothic","ITC Franklin Gothic",Arial,sans-serif;
+  font-weight: 500;
 }
 
 .navbar ul {
@@ -338,8 +319,7 @@ footer .fa:hover {
 }
 
 section {
-  margin-top: 3.157em;
-  margin-bottom: 3.157em;
+  margin: 3rem;
 }
 
 .list-menu ul {
@@ -441,6 +421,42 @@ section {
     -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
     transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
 }
+
+    .bios img {
+      width: 95%;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .person {
+      cursor: pointer;
+    }
+
+    #bio {
+      margin:10px;
+    }
+
+    .modal {
+      z-index: 9999;
+      border: 1px solid black;
+      position: fixed;
+      background-color: white;
+      top:10%;
+      right:0;
+      left:25%;
+      bottom:10%;
+      width:50%;
+      display:none;
+    }
+
+    #x {
+      margin: 10px;
+    }
+
+    #close {
+      text-decoration: none;
+      color:gray;
+    }
 
 /* ==========================================================================
    Helper classes
