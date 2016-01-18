@@ -143,6 +143,10 @@ a {
   /*text-decoration: none;*/
 }
 
+b, strong {
+  font-weight: 600;
+}
+
 /* forms from skel.css */
 input[type="email"],
 input[type="number"],
@@ -203,10 +207,6 @@ label > .label-body {
   display: inline-block;
   margin-left: .5rem;
   font-weight: normal; }
-
-.mc-field-group {
-  padding-bottom: 1.3em;
-}
 
 /* formatting */
 .container {
@@ -381,20 +381,8 @@ section {
   transition: all 0.5s ease;
 }
 
-.color-navy {
-  background-color: #214363;
-  border-color: #214363;
-  color: #FFFFFF;
-}
-
-.color-tan {
-  background-color: #ffeed9;
-  border-color: #ffeed9;
-  color: #242424;
-}
-
 .button:hover {
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   background-color: #242424;
   border-color: #242424;
   -webkit-transition: all 0.5s ease;
@@ -408,18 +396,8 @@ section {
   height: auto;
 }
 
-.form-control {
-    width: 100%;
-    height: 34px;
-    padding: 6px 9pt;
-    background-color: #fff;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
-    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
-    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+.error-msg {
+  font-style: italic;
 }
 
     .bios img {

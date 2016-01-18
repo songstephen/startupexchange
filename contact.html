@@ -12,8 +12,11 @@
 
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/skeleton.css">
+        <script src="js/vendor/jquery-1.11.3.min.js"></script>
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/helpers.js"></script>
         <script src="https://use.typekit.net/dsl7pmj.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
     </head>
@@ -44,7 +47,11 @@
                 <div class="one-half column">
                     <img src="img/contact.jpg" class="image-responsive">
                 </div>
-                <div class="one-half column">
+                <div class="one-half column submitted">
+                    <h2 class="flush-top">Thanks for Signing Up!</h2>
+                    <p>Check your email for a confirmation message. You'll be added to our newsletter after you verify your email.</p>
+                </div>
+                <div class="one-half column signup">
                     <h2 class="flush-top">Keep in touch.</h2>
                     <p>Sign up for our newsletter to recieve updates about our meetings & events.</p>
                     <!-- Begin MailChimp Signup Form -->
@@ -67,13 +74,12 @@
                         <div class="mc-field-group">
                             <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Email Address">
                         </div>
-                    </div>
-                        <div id="mce-responses" class="clear">
-                            <div class="response" id="mce-error-response" style="display:none"></div>
-                            <div class="response" id="mce-success-response" style="display:none"></div>
-                        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                    </div>   <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                         <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_792e5a329ed7437ad903bc8a8_5c64af8d82" tabindex="-1" value=""></div>
                         <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button color-navy flush-top"></div>
+                        <div id="mce-responses" class="clear">
+                            <p class="error-msg">Please enter your first name.</p>
+                        </div> 
                         </div>
                     </form>
                     </div>
