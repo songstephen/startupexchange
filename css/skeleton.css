@@ -46,10 +46,16 @@
   .container {
     width: 85%;
     padding: 0; }
+    
+  .three.columns                  { width: 48%;            }
+}
+
+@media (min-width: 720px) {
+  .three.columns                   { width: 30.6666666667%; }
 }
 
 /* For devices larger than 550px */
-@media (min-width: 550px) {
+@media (min-width: 960px) {
   .container {
     width: 80%; }
   .column,

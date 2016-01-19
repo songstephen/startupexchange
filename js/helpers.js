@@ -3,9 +3,12 @@ $(document).ready(function() {
     // about page
 
     $.getJSON('data/bios.json', function(data) {
-        console.log("bagel");
-        console.log(data);
+        $.each(data.bios, function(key, stuff) {
+        $('.bios').append('<div class="three columns person" id="' + stuff.id + '"><img src="img/peeps/' + stuff.id + '.jpg"></div>');
+        });
+
         $('.person').click(function(){
+            console.log('yoyo' + $(this).attr('id'));
             text = $(this).attr('id');
             var num = 0;
             for (var i = 0; i < data.bios.length; i++) {
@@ -14,25 +17,20 @@ $(document).ready(function() {
                 }
             }
             updateModal(data, num);
+            $('.modal').fadeToggle('500');
         });
 
     });
 
-
-    $('.person').click(function(){
-        $('.modal').fadeToggle('slow');
-    });
-
     $('#close').click(function(){
-        $('.modal').fadeToggle('slow');
+        $('.modal').fadeToggle('500');
     });
 
-    $(document).on('click', function(e) {
-
-        if ( $( ".modal" ).is( ":visible" ) && (!$(e.target).closest('.modal').length && !$(e.target).closest('.person').length) ) {
-            $(".modal").fadeToggle('slow');
+    $('.modal').click(function(e){
+        if (!e.target.id) {
+            $('.modal').fadeToggle('500');
         }
-    });
+    })
 
     // contact page
 

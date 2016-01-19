@@ -96,7 +96,7 @@
    /*IN DEVELOPMENT, COMMENT THIS OUT!*/
    /*This is to prevent the ugly flashing of text while Typekit is still loading its fonts*/
    .wf-loading {
-     /*visibility: hidden;*/
+     visibility: hidden;
    }
 
    /* typography */
@@ -135,6 +135,16 @@
 }
 
 small, .font_small {font-size: 0.75em;}
+
+.meeting {
+  color: #848484;
+}
+
+.meeting span {
+  color: #222;
+  font-size: 1.333em;
+  font-weight: 600;
+}
 
 .text-center {text-align: center;}
 
@@ -257,9 +267,14 @@ footer .fa:hover {
   background-size: cover;
   background-position: center;
   padding: 16rem 0;
-  margin-bottom: 0;
+  margin: 2rem 0;
 }
 
+.jumbotron.spread.peeps {
+  background-image: url("../img/spread2.jpg");
+  padding: 12rem 0;
+  margin-bottom: 0;
+}
 
 .column {
   width: 100%;
@@ -318,8 +333,32 @@ footer .fa:hover {
   margin-left: 2rem;
 }
 
+.navbar .fa {
+  font-size: 1.5em;
+  line-height: 5rem;
+  -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
+.navbar .fa:hover {
+  -webkit-transition: all 0.5s ease;
+    -moz-transition: all 0.5s ease;
+    -o-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+}
+
 section {
-  margin: 3rem;
+  margin: 6rem 2rem;
+}
+
+section:before { 
+  display: block; 
+  content: " "; 
+  margin-top: -500px; 
+  height: 500px; 
+  visibility: hidden; 
 }
 
 .list-menu ul {
@@ -396,6 +435,10 @@ section {
   height: auto;
 }
 
+.signup {
+  margin-bottom: 2.5rem;
+}
+
 .error-msg {
   font-style: italic;
 }
@@ -408,13 +451,14 @@ section {
 
     .person {
       cursor: pointer;
+      margin-bottom: 1em;
     }
 
     #bio {
       margin:10px;
     }
 
-    .modal {
+/*    .modal {
       z-index: 9999;
       border: 1px solid black;
       position: fixed;
@@ -425,7 +469,27 @@ section {
       bottom:10%;
       width:50%;
       display:none;
-    }
+    }*/
+
+    .modal {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.5);
+        display: none;
+      }
+
+      #dialog {
+        max-width: 60rem;
+        max-height: 40rem;
+        overflow-y: scroll;
+          position: relative;
+          margin: 10% auto;
+          padding: 5px 20px 13px 20px;
+          background: #fff;
+      }
 
     #x {
       margin: 10px;
@@ -541,7 +605,7 @@ section {
       margin-left: 0;
     }
 
-    .navbar {
+/*    .navbar {
       height: 6rem;
       line-height: 3rem;
     }
@@ -558,9 +622,8 @@ section {
     }
 
     .navbar li {
-      /*margin: 0 1rem;*/
       margin: 0;
-    }
+    }*/
 
   }
 
