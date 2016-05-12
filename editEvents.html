@@ -1,0 +1,119 @@
+<!doctype html>
+<html ng-app="myApp" class="no-js" lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Startup Exchange</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/manifest.json">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/skeleton.css">
+        <script src="js/vendor/jquery-1.11.3.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <script src="js/helpers.js"></script>
+        <script src="https://use.typekit.net/dsl7pmj.js"></script>
+        <script>try{Typekit.load({ async: true });}catch(e){}</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+        <!-- <link href="https://netdna.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet"> -->
+        <link rel="stylesheet" href="css/xeditable.min.css">
+        <script src="js/vendor/xeditable.min.js"></script>
+
+    </head>
+    <body>
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <main class="container">
+            <section id="schedule">
+            <p class="lead small">This is the Startup Exchange admin page, edit the events by clicking on their properties.  Blank options will show up as blank on the home page.</p>
+            <h2 class="text-center">Schedule of Events (click items to edit)</h2>
+            <div class="row">
+                <div class="eight columns offset-by-two">
+                    
+                    <div ng-controller="eventsCtrl"> 
+                        <div class="event" ng-repeat="event in events">
+                            <p class="meeting"><span><a href="#" editable-text="event.title" e-cols="100">{{ event.title || "No title set." }}</a></span><br><a href="#" editable-text="event.subtitle" e-cols="100">{{ event.subtitle || "No subtitle set." }}</a></p>
+                            <p><a href="#" editable-text="event.description" e-cols="100">{{ event.description || "No description set." }}</a></p>
+                            <button ng-click="deleteEvent(events.indexOf(event))">Delete This Event</button>
+                        </div>
+                        <br>
+                        <br>
+                        <button ng-click="addEvent()">Add Event</button>
+                        <br>
+                        <button ng-click="saveChanges()">Save Changes</button>
+                    </div>
+
+
+            </div>
+            </section>
+
+        </main>
+        
+        
+        <script>
+            var app = angular.module('myApp', ["xeditable"]);
+            app.controller('eventsCtrl', function($scope, $http) {
+                $http.get('events.json').success(function(data) {
+                    $scope.events = data.events;
+                });
+
+                $scope.addEvent = function() {
+                    $scope.events.push({title:"",subtitle:"",description:""});
+                };
+
+                $scope.deleteEvent = function(index) {
+                    $scope.events.splice(index, 1);
+                }
+
+                $scope.saveChanges = function() {
+                    $http.post('events.php', {events : $scope.events}).success(function(data) {
+                        if (data == "writeover success") {
+                            console.log ('success');
+                        } else {
+                            console.log("no good.");
+                        }
+                    });
+                };
+
+                $scope.$watch('events', function(newVal, oldVal) {
+                    if (newVal !== oldVal) {
+                        // var selected = $filter('filter')($scope.groups, {id: $scope.user.group});
+                        // $scope.user.groupName = selected.length ? selected[0].text : null;
+                        console.log({events : newVal});
+                    }
+                }, true);
+
+            });
+            app.controller('jsonCtrl', function($scope, $http) {
+               $http.get('events.json').success(function(data) {
+                    $scope.json = JSON.stringify(data, null, 2);
+                });
+            });
+        </script>
+        
+        
+
+        <footer>
+            <p class="font_small">Copyright © 2016 Startup Exchange. All rights reserved. Love what you do.</p>
+        </footer>
+    </body>
+</html>

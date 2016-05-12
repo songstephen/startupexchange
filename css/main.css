@@ -710,3 +710,10 @@ section:before {
       page-break-after: avoid;
     }
   }
+
+/*
+    Proper textarea resizing on admin page
+  */
+  textarea {
+    resize: both;
+  }

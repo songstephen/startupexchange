@@ -32,6 +32,8 @@
         <script src="js/helpers.js"></script>
         <script src="https://use.typekit.net/dsl7pmj.js"></script>
         <script>try{Typekit.load({ async: true });}catch(e){}</script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.5/angular.min.js"></script>
+
     </head>
     <body>
         <!--[if lt IE 8]>
@@ -62,14 +64,21 @@
             <h2 class="text-center">Schedule of Events</h2>
             <div class="row">
                 <div class="eight columns offset-by-two">
-                    <p class="meeting"><span>Startup Exchange Kickoff</span><br>Friday, Jan 22 4pm • Centergy Garage</p>
-                    <p>Welcome back to a new semester! We'll introduce the initiatives we're launching this semester and give you the opportunity to mingle with and join the Startup Exchange community.</p>
-
+                    
+                    <div ng-app="myApp" ng-controller="eventsCtrl"> 
+                        <div class="event" ng-repeat="event in events">
+                            <p class="meeting"><span>{{ event.title }}</span><br ng-show="event.subtitle">{{ event.subtitle }}</p>
+                            <p>{{ event.description}}</p>
+                        </div>
+                    </div>
+                    
+                    <!--
                     <p class="meeting"><span>Growing Fast & Leading Well</span><br>Friday, Jan 29 4pm • Centergy Garage</p>
                     <p>Kyle Porter (CEO of SalesLoft) shares his advice on leading a successful team. Through his experiences of creating the fastest growing startup in Georgia, Kyle will be giving valuable advice on product and team management.</p>
-
+          
+                    
                     <p class="meeting"><span>Startup Academy 1: Ideation and Brainstorming</span><br>Friday, Jan 29 6pm • Centergy Garage</p>
-                    <p>We'll be kicking off the first session of Startup Academy, an education series to help Georgia Tech students learn about principles of entrepreneurship.</p>
+                    <p>We'll be kicking off the first session of Startup Academy, an education series to help Georgia Tech students learn about principles of entrepreneurship.</p> -->
 
                     <p class="text-center"><a class="button" href="https://www.facebook.com/StartupExchange/" target="_blank">Our Facebook Events</a>
                     </p>
@@ -159,6 +168,17 @@
         <footer>
             <p class="font_small">Copyright © 2016 Startup Exchange. All rights reserved. Love what you do.</p>
         </footer>
+        
+        <script>
+            var app = angular.module('myApp', []);
+            app.controller('eventsCtrl', function($scope, $http) {
+               $http.get('events.json').success(function(data) {
+                    $scope.events = data.events;
+                });
+            });
+        </script>
+
+
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.3.min.js"><\/script>')</script>
